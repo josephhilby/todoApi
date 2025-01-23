@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/josephhilby/todoApi/api/todo/app/v1"
 )
 
 func main() {
-	fmt.Println("Hello World")
+	x := &v1.TodoItem{}
+	fmt.Println(x)
 }
