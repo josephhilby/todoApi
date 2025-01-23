@@ -1,0 +1,8 @@
+name: todoApi
+
+repo: github.com/josephhilby/todoApi
+
+trunk_branch: main
+
+api:
+  image_name: ghcr.io/steady-bytes/draft-api-builder:main
