@@ -3,3 +3,7 @@ service:
   domain: todo
   env: local
   entrypoint: http://localhost:2221
+
+repositories:
+  postgres:
+    url: postgres://draft:draft@localhost:5432/draft

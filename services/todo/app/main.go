@@ -7,14 +7,16 @@ import (
 	"github.com/josephhilby/todoApi/api/todo/app/v1/v1connect"
 	"github.com/steady-bytes/draft/pkg/chassis"
 	"github.com/steady-bytes/draft/pkg/loggers/zerolog"
+	"github.com/steady-bytes/draft/pkg/repositories/postgres/bun"
 )
 
 func main() {
 	logger := zerolog.New()
+	db := bun.New("")
 	rpcHandler := &controller{}
 	chassis.New(logger).WithRPCHandler(rpcHandler).Register(chassis.RegistrationOptions{
 		Namespace: "todo",
-	}).Start()
+	}).WithRepository(db).Start()
 }
 
 type Rpc interface {

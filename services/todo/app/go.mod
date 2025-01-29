@@ -9,6 +9,7 @@ require (
 	github.com/josephhilby/todoApi/api v0.0.0
 	github.com/steady-bytes/draft/pkg/chassis v0.4.1
 	github.com/steady-bytes/draft/pkg/loggers v0.2.3
+	github.com/steady-bytes/draft/pkg/repositories v0.0.3
 )
 
 require (
@@ -26,6 +27,7 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/hashicorp/raft v1.6.0 // indirect
 	github.com/hashicorp/raft-boltdb/v2 v2.3.0 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
@@ -42,8 +44,15 @@ require (
 	github.com/spf13/viper v1.18.2 // indirect
 	github.com/steady-bytes/draft/api v1.0.0 // indirect
 	github.com/subosito/gotenv v1.6.0 // indirect
+	github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc // indirect
+	github.com/uptrace/bun v1.1.16 // indirect
+	github.com/uptrace/bun/dialect/pgdialect v1.1.16 // indirect
+	github.com/uptrace/bun/driver/pgdriver v1.1.16 // indirect
+	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
+	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	go.etcd.io/bbolt v1.3.7 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
+	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/exp v0.0.0-20230905200255-921286631fa9 // indirect
 	golang.org/x/net v0.25.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
@@ -54,4 +63,5 @@ require (
 	google.golang.org/protobuf v1.36.3 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	mellium.im/sasl v0.3.1 // indirect
 )
