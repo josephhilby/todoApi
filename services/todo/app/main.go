@@ -3,15 +3,18 @@ package main
 import (
 	"connectrpc.com/connect"
 	"context"
-	"fmt"
 	"github.com/josephhilby/todoApi/api/todo/app/v1"
 	"github.com/josephhilby/todoApi/api/todo/app/v1/v1connect"
 	"github.com/steady-bytes/draft/pkg/chassis"
+	"github.com/steady-bytes/draft/pkg/loggers/zerolog"
 )
 
 func main() {
-	x := &v1.TodoItem{}
-	fmt.Println(x)
+	logger := zerolog.New()
+	rpcHandler := &controller{}
+	chassis.New(logger).WithRPCHandler(rpcHandler).Register(chassis.RegistrationOptions{
+		Namespace: "todo",
+	}).Start()
 }
 
 type Rpc interface {
@@ -28,6 +31,11 @@ func (h *controller) RegisterRPC(server chassis.Rpcer) {
 
 func (c *controller) List(ctx context.Context, req *connect.Request[v1.ListRequest]) (*connect.Response[v1.ListResponse], error) {
 	return connect.NewResponse(&v1.ListResponse{
-		Items: []*v1.TodoItem{},
+		Items: []*v1.TodoItem{
+			{
+				Title: "test Title",
+				Body:  "test Body",
+			},
+		},
 	}), nil
 }

@@ -1,0 +1,5 @@
+service:
+  name: app
+  domain: todo
+  env: local
+  entrypoint: http://localhost:2221
